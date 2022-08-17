@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column ;
+    flex-wrap: wrap;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+/**Head**/
+
+#menu {
+    height: 18vh;
+    background-color: black;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "logo botonera";
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+#botonera {
+    grid-area: botonera;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#logo {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    margin: 1em;
+    text-decoration: none;
+    
+}
+
+
+/*Banner*/
+
+.banner-hero {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-image: url("../img/banner-home-banda.jpg");
+    padding-top: 3em;    
+    min-height: 22em;
+    color: rgb(255, 255, 255);
+}
+
+#h1-hero {
+    text-align: right;
+    font-size: 3.7em;
+    
+}
+
+.h1-pages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 14em;
+    font-weight: 800;
+}
+
+
+#h1-contacto {
+    font-size: 9em;
+    text-align: center;
+}
+
+#p-hero {
+    text-align: right;
+}
+
+#div-hero {
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+}
+
+#btn-hero {
+    height: 60px;
+    width: 120px;
+    border-radius: 4px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/**/
+
+/** Main **/
+
+section {
+    margin-bottom: 2.5em;
+    padding-left: 6em;
+    padding-right: 6em;
+    
+}
+
+h1 {
+    text-align: center;
+    font-size: 14em;
+    font-weight: 800;
+}
+
+h2 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+h3 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+/**/
+
+/**Footer**/
+
+footer {
+    background-color: rgb(0, 0, 0);
+    height: 12vh;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "made redes";
+    justify-content: space-around;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+#made {
+        grid-area: made; 
+}
+
+#redes {
+    grid-area: redes;
+}
+
+footer p {
+    color: rgb(255, 255, 255);
+    padding-right: 300px;
+}
+
+footer div a {
+    padding: .5em;
+}
+
+/**/
+
+/**Clases**/
+
+.redes-sociales {
+    width: 40px;
+    height: 40px;
+}
+
+ 
+.content {
+    background-color: white;
+    text-align: center;
+}
+
+/**Fotos**/
+
+#fotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cada-foto {
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+/**Fotos**/
+
+#videos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+
+}
+
+.cada-video {
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+/*Form*/
+
+section table {
+    background-color: white;
+} 
+
+th, td {
+    border-color: red;
+    padding: 0.6em;
+}
+
+#formulario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+form {
+    background-color: Black;
+    border-radius: .5em;
+    color: white;
+    font-size: 1em;
+    padding: 1em;
+    width: 40em;
+}
+
+#p-form {
+    text-align: center;
+}
+
+input, textarea {
+    border: 0;
+    outline: none;
+}
+
+.btn {
+    border-radius: 3px;
+    display: inline-block;
+    padding: 20px 15px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.tabla {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
+
+.field {
+    border: solid 1px #ccc;
+    padding: 1em;
+    width: 45em;
+}
+
+/**/
+
+/*Responsive*/
+
+@media only screen and (max-width: 1024px) {
+    
+    /*Menú Tablet*/
+    
+    #menu {
+        height: 25vh;
+        grid-template-rows: 2fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:    "logo" 
+                                "botonera";
+        justify-content: center;
+        align-content: space-around;
+        
+    }
+
+    /* Banner */
+
+    .banner-hero {
+        background-image: url("../img/banner-home-banda-tablet.jpg");
+        justify-content: center;    
+        align-items: center;
+        min-height: 25em;
+    
+    }
+
+    #p-hero {
+        text-align: center;
+    }
+
+    #div-hero {
+        justify-content: center;
+    }
+
+    #btn-hero {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+
+    /* Body */
+
+    section {
+        padding-left: .5em;
+        padding-right: .5em;
+    }
+
+    #h1-hero {
+        text-align: center;
+        font-weight: 700;
+    }
+    
+    .h1-pages {
+        font-size: 7em;
+
+    }
+
+    #h1-contacto {
+        font-size: 6em;
+    }
+    
+
+    p, h2, h3 {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        font-weight: 700;
+    }
+
+    .fotos {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #videos {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    /* Footer */
+
+    footer {
+        height: 20vh;
+        grid-template-rows: 2fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:    "made" 
+                                "redes";
+    }
+
+    #made {
+        margin-bottom: 1em ;
+    }
+    
+    #redes {
+        margin-bottom: 2em ;
+    }
+
+    footer p {
+        padding-right: 0px;
+    }
+
+    .field {
+        width: 40em;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    
+    .banner-hero {
+        background-image: url("../img/banner-home-banda-smartphone.jpg");
+    }
+
+    .h1-pages {
+        font-weight: 700;
+    }
+
+    #h1-hero {
+        font-size: 2.5em;
+        margin-bottom: .5em;
+        text-align: center;
+    }
+
+    #h1-contacto {
+        font-size: 4em;
+        text-align: center;
+    }
+    
+
+    form {
+        background-color: red;
+        font-size: .5em;
+
+    }
+
+    .field {
+        width: 22em;
+    }
+       
+}
