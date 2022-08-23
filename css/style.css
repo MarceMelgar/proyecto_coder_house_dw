@@ -22,8 +22,8 @@ body {
     background-color: black;
 }
 
-.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
-    color: #fff;
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link.active {
+    color: rgb(255, 255, 255);
 }
 
 .nav-link {
@@ -68,9 +68,6 @@ body {
     border-color: red;
     }
 
-.nav-link.active {
-    color:rgb(255, 255, 255);
-}
 
 .btn-primary:hover {
     background-color: rgb(254, 109, 109);
@@ -124,7 +121,10 @@ section {
 
 .content {
     background-color: white;
-    text-align: center;
+}
+
+p {
+    text-align: left;
 }
 
 h1 {
