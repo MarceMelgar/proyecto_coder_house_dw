@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/miniatura-toco-y-obligo.png">
+    <!-- Link de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- Mis Estilos-->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>toco y obligo - Contacto</title>
+</head>
+<body>
+    <!--Encabezado-->
+    <header>
+         <!--Barra de menú-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-BK">
+            <div class="container">
+              <a class="navbar-brand" href="/index.html"><img src="../img/logo-toco-y-obligo-ts.png" alt="logo-de-banda"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./biografia.html">Biografía</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/pages/shows.html">Shows</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/pages/fotos.html">Fotos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="/pages/contacto.html">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </header>
+    <!--Fin de encabezado-->
+    <!--Bloque principal-->
+    <main>
+        <!--Banner-->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../img/banner-home-banda.jpg" class="bd-placeholder-img" alt="Imagen de presentación de la banda">
+                <div class="container">
+                    <div class="carousel-caption text-center">
+                        <h1 class="h1-contact">CONTACTO</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Contenido--> 
+        <section class="content">
+            <h2>Si querés dejarnos un mensaje, es por acá 👇🏻</h2>
+            <!--Formulario-->
+            <div class="row justify-content-center">
+                <article class="col-md-7 bg-form">
+                    <form class="container">
+                    <!--Nombre y Email-->
+                    <div class="row justify-content-between">
+                        <div class="col-5">
+                            <label for="name">Nombre:</label>
+                            <input type="text" class="form-control" placeholder="o apodo ;)" aria-label="First name">
+                        </div>
+                        <div class="col-5">
+                            <label for="inputEmail">Email:</label>
+                            <input type="email" class="form-control" id="inputEmail">
+                        </div>
+                    </div>
+                    <br>
+                    <!--Mensaje-->
+                    <div class="form-floating">
+                        ¿Querés decirnos algo?
+                        <textarea class="form-control" placeholder="Lo que quieras, con sinceridad :)" id="floatingTextarea" style="height: 100px">
+                        </textarea>
+                        <label for="floatingTextarea"></label>    
+                    </div>
+                    <br>
+                    <!--¿Quiere el disco?-->
+				    <div>
+                        <label for="respuesta">¿Te gustaría que te llevaramos un disco?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="respuesta" id="Sí" value="Sí">
+                            <label class="form-check-label" for="Sí">
+                                Sí
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="respuesta" id="No" value="No">
+                            <label class="form-check-label" for="No">
+                            No
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <!--Canción favorita-->
+				    <div>
+                        ¿Cual es tu canción favorita de la banda?
+                        <select class="form-select form-select-lg mt-3 mb-3" aria-label=".form-select-lg">
+                            <option></option>
+                            <option value="1">Olvidar y soñar</option>
+                            <option value="2">La Maldición</option>
+                            <option value="3">Vino y Bandoneón</option>
+                        </select>
+                    </div>
+                    <br>
+                    <!--Saber si quiere info de la banda-->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="1" name="respuesta" id="acepta">
+                        <label class="form-check-label" for="acepta">
+                        Check si queres suscribirte automaticamente a nuestra Newsletter
+                        </label>
+                    </div>
+                    <br>
+                    <!--Enviar-->
+                    <div class="col-2 d-grid gap-2 mx-auto">
+                        <button class="btn btn-primary" type="submit">Enviar</button>
+                    </div>
+                </article>
+            </div>
+            </form>
+        </section>
+    </main>
+    <!--Pie de página-->
+    <footer>
+        <p id="made">De Uruguay al mundo 🤘🏻</p>
+        <div id="redes">
+            <a href="https://Youtube.com"><img class="redes-sociales" src="../img/youtubeW.png" alt="icono de youtube"></a>
+            <a href="https://Spotify.com"><img class="redes-sociales" src="../img/spotifyW.png" alt="icono de spotify"></a>
+            <a href="https://Instagram.com"><img class="redes-sociales" src="../img/instagramW.png" alt="icono de instagram"></a>
+            <a href="https://Twitter.com"><img class="redes-sociales" src="../img/gorjeoW.png" alt="icono de twitter"></a>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <!-- JavaScript Bundle with Popper -->
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">        
+    </script>
+</body>
+</html>
