@@ -7,7 +7,7 @@ body {
     overflow-x: hidden;
 }
 
-/* NAV
+/* MENU-NAV
 -------------------------------------------------- */
 
 .navbar-light .navbar-toggler-icon {
@@ -39,7 +39,7 @@ body {
     color:red;
 }
 
-/* SLIDE
+/* HERO
 -------------------------------------------------- */
 
 .carousel {
@@ -51,13 +51,6 @@ body {
     left: 10%;
     bottom: 8rem;
     z-index: 10;
-    }
-
-#div-hero {
-        right: 10%;
-        left: 10%;
-        bottom: 2rem;
-        z-index: 10;
     }
 
 .carousel-item {
@@ -87,6 +80,13 @@ body {
     padding: 20px 30px;
 }
 
+#div-hero {
+    right: 10%;
+    left: 10%;
+    bottom: 2rem;
+    z-index: 10;
+}
+
 #btn-hero {
     display: flex;
     justify-content: end;
@@ -107,11 +107,6 @@ body {
 /* MAIN
 -------------------------------------------------- */
 
-.row {
-    --bs-gutter-x: 0;
-    --bs-gutter-y: 0;
-}
-
 section {
     margin-bottom: 2.5em;
     padding-left: 6em;
@@ -119,12 +114,13 @@ section {
     
 }
 
-.content {
-    background-color: white;
-}
-
 p {
     text-align: left;
+}
+
+.row {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
 }
 
 .h1-pages {
@@ -177,21 +173,6 @@ h3 {
     transform: scale(1.1);
 }
 
-/* VIDEOS
--------------------------------------------------- */
-
-#videos {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-
-}
-
-.cada-video {
-    margin-right: 1em;
-    margin-bottom: 1em;
-}
-
 /* FORM
 -------------------------------------------------- */
 
@@ -221,6 +202,8 @@ h3 {
 /* FOOTER
 -------------------------------------------------- */
 
+/* Se define el Grid */
+
 footer {
     background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.8393951330532212) 60%, rgba(151,4,4,1) 82%);
     height: 12vh;
@@ -242,6 +225,8 @@ footer {
     grid-area: redes;
     
 }
+
+/* Se cierra la definición del Grid */
 
 footer p {
     color: rgb(255, 255, 255);
@@ -292,13 +277,13 @@ footer div a {
 
 
 /* RESPONSIVE
--------------------------------------------------- */
+------------------------------------------------------------------------------------------------- */
 
 
 @media only screen and (max-width: 1024px) {
     
 
-    /* Banner */
+    /* Hero */
 
     #h1-hero {
         text-align: center;
@@ -322,7 +307,6 @@ footer div a {
         padding-right: .5em;
     }
 
-    
     .h1-pages {
         font-size: calc(9rem + 1.5vw);
     }
