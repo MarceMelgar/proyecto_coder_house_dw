@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+  /* SLIDE
+-------------------------------------------------- */
+  /* RESPONSIVE
+-------------------------------------------------- */ }
+  body header nav {
+    background-color: black; }
+    body header nav div div ul li {
+      padding-left: 2em;
+      font-size: 20px;
+      display: inline-block; }
+  body .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+  body .navbar-light .navbar-toggler {
+    border-color: #fff; }
+  body .nav-item .nav-link.active {
+    color: white; }
+  body .nav-link {
+    color: rgba(255, 255, 255, 0.5); }
+  body .nav-item a:hover {
+    color: red; }
+  body main div div img {
+    align-items: center; }
+  body main div div div {
+    right: 10%;
+    left: 10%;
+    z-index: 10; }
+    body main div div div h1 {
+      text-align: right;
+      font-size: 59px;
+      font-weight: 700; }
+    body main div div div p {
+      text-align: right; }
+    body main div div div p {
+      display: flex;
+      justify-content: end; }
+  body main section {
+    margin-bottom: 2.5em;
+    padding-left: 6em;
+    padding-right: 6em; }
+    body main section h2 {
+      margin-top: 2em;
+      margin-bottom: 2em;
+      text-align: center;
+      font-size: 2em;
+      font-weight: 600; }
+    body main section p {
+      text-align: left; }
+  body .carousel-caption {
+    right: 10%;
+    left: 10%;
+    bottom: 5rem;
+    z-index: 10; }
+  body .carousel-item {
+    height: 30rem; }
+  body .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%; }
+  body .btn-primary {
+    background-color: red;
+    border-color: red; }
+  body .btn-primary:hover {
+    background-color: #fe6d6d;
+    border-color: #fe6d6d; }
+  body .btn {
+    margin-top: 1em;
+    padding: 20px 30px; }
+  @media only screen and (max-width: 1024px) {
+    body #h1-hero {
+      text-align: center;
+      font-size: 3.2em; }
+    body #p-hero {
+      font-weight: 200;
+      text-align: center; }
+    body #btn-hero {
+      justify-content: center; }
+    body section {
+      padding-left: .5em;
+      padding-right: .5em; }
+    body p, body h2, body h3 {
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+      font-weight: 700; } }
+  @media only screen and (max-width: 576px) {
+    body #h1-hero {
+      font-size: 2em;
+      margin-bottom: .5em; }
+    body .nav-bar {
+      justify-content: center; }
+    body .navbar-nav {
+      padding-left: 5px; }
+    body .carousel-item {
+      height: 32rem; }
+    body .container {
+      padding-left: 0; } }
+  body footer {
+    background-image: linear-gradient(90deg, #020024 0%, rgba(0, 0, 0, 0.839395) 60%, #970404 82%);
+    height: 12vh;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "made redes";
+    justify-content: space-around;
+    align-content: center;
+    justify-items: center;
+    align-items: center; }
+    body footer p {
+      grid-area: made;
+      color: white;
+      padding-right: 300px; }
+    body footer div {
+      grid-area: redes; }
+      body footer div a {
+        padding: .5em; }
+        body footer div a img {
+          width: 40px;
+          height: 40px; }
+  @media only screen and (max-width: 1024px) {
+    body footer {
+      height: 20vh;
+      grid-template-rows: 2fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "made"  "redes"; }
+    body #made {
+      margin-bottom: 1em; }
+    body #redes {
+      margin-bottom: 2em; }
+    body footer p {
+      padding-right: 0px; } }

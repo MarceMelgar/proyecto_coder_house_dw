@@ -1,0 +1,137 @@
+main {
+    div {
+        div {
+            img {
+                align-items: center;     
+            }
+            div {
+                right: 10%;
+                left: 10%;
+                z-index: 10;
+                h1 {
+                    text-align: right;
+                    font-size: ($h1-hero*2)+3;
+                    font-weight: 700;
+                }
+                p {
+                    text-align: right;
+                }
+                p {
+                    display: flex;
+                    justify-content: end;
+                }
+            }
+        }
+    }
+    section {
+        margin-bottom: 2.5em;
+        padding-left: 6em;
+        padding-right: 6em;
+        h2 {
+            margin-top: 2em;
+            margin-bottom: 2em;
+            text-align: center;
+            font-size: 2em;
+            font-weight: 600;
+        }
+        p {
+            text-align: left;
+        }
+
+    }
+}
+
+
+/* SLIDE
+-------------------------------------------------- */
+
+
+.carousel-caption {
+    right: 10%;
+    left: 10%;
+    bottom: 5rem;
+    z-index: 10;
+    }
+
+.carousel-item {
+    height: 30rem;
+    }
+
+.carousel-item > img {
+    position:absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    }
+
+.btn-primary {
+    background-color: red;
+    border-color: red;
+    }
+
+
+.btn-primary:hover {
+    background-color: rgb(254, 109, 109);
+    border-color: rgb(254, 109, 109);
+    }
+.btn {
+    margin-top: 1em;
+    padding: 20px 30px;
+}
+
+/* RESPONSIVE
+-------------------------------------------------- */
+
+
+@media only screen and (max-width: 1024px) {
+        
+
+    #h1-hero {
+        text-align: center;
+        font-size: 3.2em;
+    }
+    
+    #p-hero {
+        font-weight: 200;
+        text-align: center;
+    }
+    
+    #btn-hero {
+        justify-content: center;
+    }
+    
+    section {
+        padding-left: .5em;
+        padding-right: .5em;
+    }
+    
+    p, h2, h3 {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        font-weight: 700;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    #h1-hero {
+        font-size: 2em;
+        margin-bottom: .5em;
+    }
+       
+    .nav-bar {
+        justify-content: center;
+    }
+
+    .navbar-nav {
+        padding-left: 5px;
+    }
+
+    .carousel-item {
+        height: 32rem;
+        }
+
+    .container {
+        padding-left: 0;
+    }
+}

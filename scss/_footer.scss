@@ -1,0 +1,50 @@
+footer {
+    background-image: $color-footer;
+    height: 12vh;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "made redes";
+    justify-content: space-around;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    p {
+        grid-area: made; 
+        color: rgb(255, 255, 255);
+        padding-right: 300px;
+    }
+    div {
+        grid-area: redes;
+        a {
+            padding: .5em;
+            img {
+                width: 40px;
+                height: 40px;
+            }  
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    footer {
+        height: 20vh;
+        grid-template-rows: 2fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:    "made" 
+                                "redes";
+    }
+
+    #made {
+        margin-bottom: 1em ;
+    }
+    
+    #redes {
+        margin-bottom: 2em ;
+    }
+
+    footer p {
+        padding-right: 0px;
+    }
+}
