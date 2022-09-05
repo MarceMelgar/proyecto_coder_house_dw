@@ -63,8 +63,8 @@ body {
     left: 0;
     min-width: 100%; }
   body .btn-primary {
-    background-color: red;
-    border-color: red; }
+    background-color: red !important;
+    border-color: red !important; }
   body .btn-primary:hover {
     background-color: #fe6d6d;
     border-color: #fe6d6d; }
@@ -72,6 +72,8 @@ body {
     margin-top: 1em;
     padding: 20px 30px; }
   @media only screen and (max-width: 1024px) {
+    body main div div img {
+      src: url(../img/banner-home-banda-tablet.jpg); }
     body #h1-hero {
       text-align: center;
       font-size: 3.2em; }
@@ -83,7 +85,7 @@ body {
     body section {
       padding-left: .5em;
       padding-right: .5em; }
-    body p, body h2, body h3 {
+    body h2, body h3 {
       margin-left: 1.5em;
       margin-right: 1.5em;
       font-weight: 700; } }
@@ -93,12 +95,25 @@ body {
       margin-bottom: .5em; }
     body .nav-bar {
       justify-content: center; }
-    body .navbar-nav {
-      padding-left: 5px; }
+    body .container, body .navbar-nav {
+      padding-left: 0; }
     body .carousel-item {
       height: 32rem; }
-    body .container {
-      padding-left: 0; } }
+    body section {
+      padding-left: .3em;
+      padding-right: .3em; }
+    body p {
+      margin-left: .5em;
+      margin-right: .5em; } }
+  body .h1-pages {
+    text-align: center;
+    font-size: calc(11rem + 2.5vw);
+    font-weight: 700; }
+  body .row {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0; }
+  body .card-body p {
+    text-align: start; }
   body footer {
     background-image: linear-gradient(90deg, #020024 0%, rgba(0, 0, 0, 0.839395) 60%, #970404 82%);
     height: 12vh;
@@ -118,9 +133,38 @@ body {
       grid-area: redes; }
       body footer div a {
         padding: .5em; }
-        body footer div a img {
-          width: 40px;
-          height: 40px; }
+  body .bi-youtube {
+    font-size: 30px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: white; }
+    body .bi-youtube:hover {
+      color: #F70100; }
+  body .bi-spotify {
+    font-size: 30px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: white; }
+    body .bi-spotify:hover {
+      color: #1ED05E; }
+  body .bi-instagram {
+    font-size: 30px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: white; }
+    body .bi-instagram:hover {
+      color: #8a3ab9; }
+  body .bi-twitter {
+    font-size: 30px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: white; }
+    body .bi-twitter:hover {
+      color: #1C96E9; }
   @media only screen and (max-width: 1024px) {
     body footer {
       height: 20vh;

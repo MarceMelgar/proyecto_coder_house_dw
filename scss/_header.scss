@@ -1,7 +1,7 @@
 
 header {
     nav {
-        background-color: black;
+        background-color: map-get($mapa , $key:fondo1); // USO DE MAP-GET
         div {
             div {
                 ul {

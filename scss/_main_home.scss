@@ -10,7 +10,7 @@ main {
                 z-index: 10;
                 h1 {
                     text-align: right;
-                    font-size: ($h1-hero*2)+3;
+                    font-size: ($h1-hero*2)+3; //USO DE OPERACIÓN
                     font-weight: 700;
                 }
                 p {
@@ -65,8 +65,8 @@ main {
     }
 
 .btn-primary {
-    background-color: red;
-    border-color: red;
+    background-color: red !important;
+    border-color: red !important;
     }
 
 
@@ -86,6 +86,10 @@ main {
 @media only screen and (max-width: 1024px) {
         
 
+    main div div img {
+        src:url(../img/banner-home-banda-tablet.jpg);
+    }
+        
     #h1-hero {
         text-align: center;
         font-size: 3.2em;
@@ -105,7 +109,7 @@ main {
         padding-right: .5em;
     }
     
-    p, h2, h3 {
+    h2, h3 {
         margin-left: 1.5em;
         margin-right: 1.5em;
         font-weight: 700;
@@ -123,15 +127,25 @@ main {
         justify-content: center;
     }
 
+    .container {
+        padding-left: 0;
+    }
+
     .navbar-nav {
-        padding-left: 5px;
+        @extend .container;
     }
 
     .carousel-item {
         height: 32rem;
         }
 
-    .container {
-        padding-left: 0;
+    section {
+        padding-left: .3em;
+        padding-right: .3em;
+    }
+        
+    p {
+        margin-left: .5em;
+        margin-right: .5em;
     }
 }

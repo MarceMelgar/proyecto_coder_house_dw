@@ -1,0 +1,14 @@
+.h1-pages {
+    text-align: center;
+    font-size: calc(11rem + 2.5vw);
+    font-weight: 700;
+}
+
+.row {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+}
+
+.card-body p {
+    text-align: start;
+}

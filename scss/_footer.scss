@@ -17,14 +17,29 @@ footer {
     div {
         grid-area: redes;
         a {
-            padding: .5em;
-            img {
-                width: 40px;
-                height: 40px;
-            }  
+            padding: .5em;;
         }
     }
 }
+
+// MIXIN DE REDES
+
+.bi-youtube  { 
+    @include redes($youtube);
+}
+
+.bi-spotify  { 
+    @include redes($spotify);
+}
+
+.bi-instagram {
+    @include redes($instagram);
+}
+
+.bi-twitter {
+    @include redes($twitter);
+}
+
 
 @media only screen and (max-width: 1024px) {
 
