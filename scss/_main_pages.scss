@@ -12,3 +12,30 @@
 .card-body p {
     text-align: start;
 }
+
+// USO DE BREADCRUMB
+
+.breadcrumb {
+    justify-content: center;
+}
+
+.breadcrumb-item:active {
+    color: rgba(255, 255, 255, 0.468);
+}
+
+div {
+    nav {
+        ol {
+            li {
+                a {
+                    color: red;
+                    font-style: italic;
+                    text-decoration: none;
+                    &:hover {
+                        color:rgba(255, 255, 255, 0.8);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -114,6 +114,16 @@ body {
     --bs-gutter-y: 0; }
   body .card-body p {
     text-align: start; }
+  body .breadcrumb {
+    justify-content: center; }
+  body .breadcrumb-item:active {
+    color: rgba(255, 255, 255, 0.468); }
+  body div nav ol li a {
+    color: red;
+    font-style: italic;
+    text-decoration: none; }
+    body div nav ol li a:hover {
+      color: rgba(255, 255, 255, 0.8); }
   body footer {
     background-image: linear-gradient(90deg, #020024 0%, rgba(0, 0, 0, 0.839395) 60%, #970404 82%);
     height: 12vh;
