@@ -9,7 +9,6 @@ body {
 
 /* Imágen de presentación del sitio */
 
-
 #aparicion-home {
     animation-duration: 6s;
     animation-timing-function: ease;
@@ -22,13 +21,49 @@ body {
 }
 
 @keyframes img-aparece {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
+
+#aparecion-info {
+    animation-duration: 6s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: info-aparece;
+}
+
+@keyframes info-aparece {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    60% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/** 
 
 #logo-intro {
     scale: 2;
-}
+} 
+
+**/
 
 #img-fondo-home {
     display: flex;
@@ -45,7 +80,7 @@ body {
 .cta {
     bottom: 0;
     left: 0;
-    padding-bottom: 1.42857rem;
+    padding-bottom: 1.4rem;
     position: absolute;
     right: 0;
     text-align: center;
@@ -121,9 +156,14 @@ i {
 /* MENU-NAV
 -------------------------------------------------- */
 
-div.container {
+#sticky {
     position: sticky;
-    top: 0;
+    top: 0%;
+    z-index: 100;
+}
+
+nav .container {
+    max-width: 1200px;
 }
 
 .bg-BK {
