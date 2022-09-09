@@ -12,11 +12,14 @@ footer {
     p {
         grid-area: made; 
         text-align: center;
+        margin-top: 2em;
+        font-size: larger;
         color: rgb(255, 255, 255);
     }
     span {
         grid-area: contrata;
         text-align: center;
+        margin-top: 1em;
         color:rgb(255, 255, 255);
     }
     div {
@@ -63,11 +66,11 @@ footer {
 
     
     #redes {
-        margin-top: 3em ;
-        margin-bottom: 2em ;
+        margin-top: 2em;
+        margin-bottom: 2em;
     }
 
     footer p {
-        padding-right: 0px;
+        padding-right: 0;
     }
 }

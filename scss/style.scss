@@ -6,7 +6,9 @@
 body {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
+    width: 100vw;
     overflow-x: hidden;
+    box-sizing: border-box;
     @import "./header";
     @import "./main_home";   
     @import "./main_pages"; 

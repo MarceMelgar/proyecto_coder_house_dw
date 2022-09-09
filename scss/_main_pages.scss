@@ -13,6 +13,10 @@
     text-align: start;
 }
 
+.table {
+    width: 80%;
+}
+
 // USO DE BREADCRUMB
 
 .breadcrumb {
@@ -38,4 +42,21 @@ div {
             }
         }
     }
+}
+
+
+/* RESPONSIVE
+------------------------------------- */
+
+@media only screen and (max-width: 1024px) {
+
+    .h1-pages {
+        font-size: calc(9rem + 1.5vw);
+    }
+
+    .h1-contact {
+        font-size: calc(5rem + 2.5vw);
+        font-weight: 700;
+    }
+
 }

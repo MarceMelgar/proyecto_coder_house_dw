@@ -4,7 +4,9 @@
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+  width: 100vw;
   overflow-x: hidden;
+  box-sizing: border-box;
   /* Lineas que forman la hamburguesa */
   /* Le agrego espacios a las lineas */
   /* Cuando esta abierto el menú (INICIO) */
@@ -19,7 +21,9 @@ body {
   /* AUSPICIANTES
 -------------------------------------------------- */
   /* RESPONSIVE
--------------------------------------------------- */ }
+-------------------------------------------------- */
+  /* RESPONSIVE
+------------------------------------- */ }
   body header nav {
     background-color: black; }
     body header nav div div ul li {
@@ -66,34 +70,27 @@ body {
     transform: rotate(0); }
   body .navbar-toggler.collapsed .toggler-icon {
     background-color: #ffffff; }
-  body main div div img {
-    align-items: center; }
-  body main div div div {
-    right: 10%;
-    left: 10%;
-    z-index: 10; }
-    body main div div div h1 {
-      text-align: right;
-      font-size: 59px;
-      font-weight: 700; }
-    body main div div div p {
-      text-align: right; }
-    body main div div div p {
-      display: flex;
-      justify-content: end; }
-  body main section {
+  body h1 {
+    padding-top: 2em;
+    text-align: center;
+    font-size: 62px;
+    font-weight: 700; }
+  body .h2-home {
+    padding-top: 5em;
+    text-align: center;
+    font-size: 2em; }
+  body h2 {
+    text-align: center;
+    margin: 2em 0; }
+  body section {
     margin-top: 5em;
     margin-bottom: 2.5em;
     padding-left: 6em;
     padding-right: 6em; }
-    body main section h2 {
-      margin-top: 2em;
-      margin-bottom: 2em;
-      text-align: center;
-      font-size: 2em;
-      font-weight: 600; }
-    body main section p {
-      text-align: left; }
+  body p {
+    margin: 0 10%;
+    font-size: 20px;
+    text-align: left; }
   body #aparicion-home {
     animation-duration: 6s;
     animation-timing-function: ease;
@@ -154,7 +151,7 @@ body {
     margin-bottom: 1em;
     font-size: large;
     color: white; }
-  body .btn-cta {
+  body .btn-cta, body .btn-wp {
     border-bottom: 2px solid red;
     text-decoration: none;
     display: inline-block;
@@ -163,8 +160,13 @@ body {
     text-align: center;
     vertical-align: middle;
     color: white; }
-  body .btn-cta:hover {
+  body .btn-cta:hover, body .btn-wp:hover {
     color: red; }
+  body .btn-wp {
+    padding: 0 1em;
+    margin-bottom: 0px;
+    vertical-align: auto;
+    color: black; }
   body .bi-music-note-beamed {
     color: #ffffff;
     margin-left: 6px;
@@ -199,6 +201,8 @@ body {
     align-items: center; }
   body main section.container div {
     justify-content: center; }
+  body #ancho-img {
+    width: 100%; }
   body .buy {
     display: flex;
     flex-flow: column nowrap;
@@ -217,8 +221,6 @@ body {
     color: black; }
   body .btn-buy:hover {
     color: red; }
-  body main aside {
-    background-color: rgba(206, 206, 206, 0.46); }
   body main aside div {
     display: flex;
     flex-flow: row wrap;
@@ -230,8 +232,7 @@ body {
     font-size: 30px;
     text-align: center;
     padding-top: 1em;
-    padding-bottom: 1em;
-    color: #7c7c7c; }
+    padding-bottom: 1em; }
   @media only screen and (max-width: 1024px) {
     body main div div img {
       src: url(../img/banner-home-banda-tablet.jpg); }
@@ -243,25 +244,23 @@ body {
       margin-right: 1.5em;
       font-weight: 700; } }
   @media only screen and (max-width: 576px) {
-    body #h1-hero {
-      font-size: 2em;
-      margin-bottom: .5em; }
-    body main section div img {
-      transform: scale(0.7); }
-    body .nav-bar {
-      justify-content: center; }
-    body .container {
-      padding-left: 0; }
-    body .navbar-nav {
-      padding-left: 0; }
-    body .carousel-item {
-      height: 32rem; }
-    body section {
-      padding-left: .3em;
-      padding-right: .3em; }
-    body p {
-      margin-left: .5em;
-      margin-right: .5em; } }
+    body {
+      /* #h1-hero {
+        font-size: 2em;
+        margin-bottom: .5em;
+    } */ }
+      body .h2-home {
+        padding-top: 1em; }
+      body section.container {
+        padding-bottom: 3em; }
+      body .nav-bar {
+        justify-content: center; }
+      body .container {
+        padding-left: 0; }
+      body .navbar-nav {
+        padding-left: 0; }
+      body .carousel-item {
+        height: 32rem; } }
   body .h1-pages {
     text-align: center;
     font-size: calc(11rem + 2.5vw);
@@ -271,6 +270,8 @@ body {
     --bs-gutter-y: 0; }
   body .card-body p {
     text-align: start; }
+  body .table {
+    width: 80%; }
   body .breadcrumb {
     justify-content: center; }
   body .breadcrumb-item:active {
@@ -281,6 +282,12 @@ body {
     text-decoration: none; }
     body div nav ol li a:hover {
       color: rgba(255, 255, 255, 0.8); }
+  @media only screen and (max-width: 1024px) {
+    body .h1-pages {
+      font-size: calc(9rem + 1.5vw); }
+    body .h1-contact {
+      font-size: calc(5rem + 2.5vw);
+      font-weight: 700; } }
   body footer {
     background-image: linear-gradient(90deg, #020024 0%, rgba(0, 0, 0, 0.839395) 60%, #970404 82%);
     height: 20vh;
@@ -295,10 +302,13 @@ body {
     body footer p {
       grid-area: made;
       text-align: center;
+      margin-top: 2em;
+      font-size: larger;
       color: white; }
     body footer span {
       grid-area: contrata;
       text-align: center;
+      margin-top: 1em;
       color: white; }
     body footer div {
       grid-area: redes; }
@@ -345,7 +355,7 @@ body {
     body #made {
       margin-bottom: 1em; }
     body #redes {
-      margin-top: 3em;
+      margin-top: 2em;
       margin-bottom: 2em; }
     body footer p {
-      padding-right: 0px; } }
+      padding-right: 0; } }
