@@ -24,6 +24,7 @@ main {
         }
     }
     section {
+        margin-top: 5em;
         margin-bottom: 2.5em;
         padding-left: 6em;
         padding-right: 6em;
@@ -41,43 +42,204 @@ main {
     }
 }
 
-
-/* SLIDE
+/* INTRO
 -------------------------------------------------- */
 
-
-.carousel-caption {
-    right: 10%;
-    left: 10%;
-    bottom: 5rem;
-    z-index: 10;
-    }
-
-.carousel-item {
-    height: 30rem;
-    }
-
-.carousel-item > img {
-    position:absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    }
-
-.btn-primary {
-    background-color: red !important;
-    border-color: red !important;
-    }
-
-
-.btn-primary:hover {
-    background-color: rgb(254, 109, 109);
-    border-color: rgb(254, 109, 109);
-    }
-.btn {
-    margin-top: 1em;
-    padding: 20px 30px;
+#aparicion-home {
+    animation-duration: 6s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: img-aparece;
 }
+
+@keyframes img-aparece {
+    0% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#aparecion-info {
+    animation-duration: 6s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: info-aparece;
+}
+
+@keyframes info-aparece {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    60% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+#img-fondo-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("/img/Portada4.jpg");
+    background-color: rgba(0,0,0,.6);
+    background-blend-mode: soft-light;
+    background-position: center;
+    background-size: cover;
+}
+
+.cta {
+    bottom: 0;
+    left: 0;
+    padding-bottom: 2rem;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    z-index: 4;
+}
+
+#h3-cta {
+    margin-top: 0em;
+    margin-bottom: 1em;
+    font-size: large;
+    color: white;
+}
+
+.btn-cta {
+    border-bottom: 2px solid red;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 2em 0.7em;
+    margin-bottom: 10px;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+}
+.btn-cta:hover {
+    color: red;
+}
+
+.bi-music-note-beamed {
+    color: #ffffff;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+#mas-info {
+    margin-top: 2em;
+}
+
+div span {
+    color: #ffffff;
+}
+
+div div i {
+    animation: bounce 1s infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes bounce {
+
+    0% {
+    transform: translateY(0);
+    }
+
+    50% {
+    transform: translateY(3px);
+    }
+    100% {
+    transform: translateY(0);
+    }
+} 
+
+.bi {
+    display: inline-block;
+    font: normal normal normal 14px/1;
+    font-size: inherit;
+    text-rendering: auto;
+    margin-left: 3px;
+    margin-right: 3px;
+    color:rgb(255, 255, 255);
+}
+
+/* COMPRA VINILO
+-------------------------------------------------- */
+
+section.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+main section.container div {
+    justify-content: center;
+}
+
+.buy {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.btn-buy {
+    border-bottom: 2px solid red;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 2em 0.7em;
+    margin-bottom: 10px;
+    text-align: center;
+    vertical-align: middle;
+    color: black;
+}
+
+.btn-buy:hover {
+    color: red;
+}
+
+/* AUSPICIANTES
+-------------------------------------------------- */
+main aside {
+    background-color: rgba(206, 206, 206, 0.46);
+}
+
+main aside div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-items: center;
+    padding-bottom: 1.5em;
+}
+
+main aside p {
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
 
 /* RESPONSIVE
 -------------------------------------------------- */
@@ -88,20 +250,6 @@ main {
 
     main div div img {
         src:url(../img/banner-home-banda-tablet.jpg);
-    }
-        
-    #h1-hero {
-        text-align: center;
-        font-size: 3.2em;
-    }
-    
-    #p-hero {
-        font-weight: 200;
-        text-align: center;
-    }
-    
-    #btn-hero {
-        justify-content: center;
     }
     
     section {
@@ -122,6 +270,10 @@ main {
         font-size: 2em;
         margin-bottom: .5em;
     }
+
+    main section div img {
+        transform: scale(0.7);
+    }
        
     .nav-bar {
         justify-content: center;
@@ -132,7 +284,7 @@ main {
     }
 
     .navbar-nav {
-        @extend .container;
+        padding-left: 0;
     }
 
     .carousel-item {

@@ -1,9 +1,22 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   overflow-x: hidden;
-  /* SLIDE
+  /* Lineas que forman la hamburguesa */
+  /* Le agrego espacios a las lineas */
+  /* Cuando esta abierto el menú (INICIO) */
+  /* Cuando esta abierto el menú (FIN) */
+  /* Cuando esta cerrado el menú (INICIO) */
+  /* Cuando esta cerrado el menú (FIN) */
+  /* Color de la hamburguesa cuando esta cerrada */
+  /* INTRO
+-------------------------------------------------- */
+  /* COMPRA VINILO
+-------------------------------------------------- */
+  /* AUSPICIANTES
 -------------------------------------------------- */
   /* RESPONSIVE
 -------------------------------------------------- */ }
@@ -13,16 +26,46 @@ body {
       padding-left: 2em;
       font-size: 20px;
       display: inline-block; }
-  body .navbar-light .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
-  body .navbar-light .navbar-toggler {
-    border-color: #fff; }
-  body .nav-item .nav-link.active {
+  body #sticky {
+    position: sticky;
+    top: 0%;
+    z-index: 100; }
+  body .bg-BK {
+    background-color: black; }
+  body .navbar-nav .nav-link.active, body .navbar-nav .show > .nav-link.active {
     color: white; }
   body .nav-link {
     color: rgba(255, 255, 255, 0.5); }
+  body .nav-item {
+    font-size: 18px; }
   body .nav-item a:hover {
-    color: red; }
+    color: #B1070C; }
+  body .toggler-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #B1070C;
+    display: block;
+    transition: all 0.15s; }
+  body .middle-bar {
+    margin: 5px auto; }
+  body .navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%; }
+  body .navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  body .navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%; }
+  body .navbar-toggler.collapsed .top-bar {
+    transform: rotate(0); }
+  body .navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  body .navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0); }
+  body .navbar-toggler.collapsed .toggler-icon {
+    background-color: #ffffff; }
   body main div div img {
     align-items: center; }
   body main div div div {
@@ -39,6 +82,7 @@ body {
       display: flex;
       justify-content: end; }
   body main section {
+    margin-top: 5em;
     margin-bottom: 2.5em;
     padding-left: 6em;
     padding-right: 6em; }
@@ -50,38 +94,146 @@ body {
       font-weight: 600; }
     body main section p {
       text-align: left; }
-  body .carousel-caption {
-    right: 10%;
-    left: 10%;
-    bottom: 5rem;
-    z-index: 10; }
-  body .carousel-item {
-    height: 30rem; }
-  body .carousel-item > img {
-    position: absolute;
-    top: 0;
+  body #aparicion-home {
+    animation-duration: 6s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: img-aparece; }
+
+@keyframes img-aparece {
+  0% {
+    opacity: 0;
+    transform: scale(1.5); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+  body #aparecion-info {
+    animation-duration: 6s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: info-aparece; }
+
+@keyframes info-aparece {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px); }
+  60% {
+    opacity: 0;
+    transform: translateY(-40px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+  body #img-fondo-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("/img/Portada4.jpg");
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: soft-light;
+    background-position: center;
+    background-size: cover; }
+  body .cta {
+    bottom: 0;
     left: 0;
-    min-width: 100%; }
-  body .btn-primary {
-    background-color: red !important;
-    border-color: red !important; }
-  body .btn-primary:hover {
-    background-color: #fe6d6d;
-    border-color: #fe6d6d; }
-  body .btn {
-    margin-top: 1em;
-    padding: 20px 30px; }
+    padding-bottom: 2rem;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    z-index: 4; }
+  body #h3-cta {
+    margin-top: 0em;
+    margin-bottom: 1em;
+    font-size: large;
+    color: white; }
+  body .btn-cta {
+    border-bottom: 2px solid red;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 2em 0.7em;
+    margin-bottom: 10px;
+    text-align: center;
+    vertical-align: middle;
+    color: white; }
+  body .btn-cta:hover {
+    color: red; }
+  body .bi-music-note-beamed {
+    color: #ffffff;
+    margin-left: 6px;
+    margin-right: 6px; }
+  body #mas-info {
+    margin-top: 2em; }
+  body div span {
+    color: #ffffff; }
+  body div div i {
+    animation: bounce 1s infinite;
+    animation-timing-function: ease; }
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(3px); }
+  100% {
+    transform: translateY(0); } }
+  body .bi {
+    display: inline-block;
+    font: normal normal normal 14px/1;
+    font-size: inherit;
+    text-rendering: auto;
+    margin-left: 3px;
+    margin-right: 3px;
+    color: white; }
+  body section.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center; }
+  body main section.container div {
+    justify-content: center; }
+  body .buy {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  body .btn-buy {
+    border-bottom: 2px solid red;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 2em 0.7em;
+    margin-bottom: 10px;
+    text-align: center;
+    vertical-align: middle;
+    color: black; }
+  body .btn-buy:hover {
+    color: red; }
+  body main aside {
+    background-color: rgba(206, 206, 206, 0.46); }
+  body main aside div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1.5em; }
+  body main aside p {
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em; }
   @media only screen and (max-width: 1024px) {
     body main div div img {
       src: url(../img/banner-home-banda-tablet.jpg); }
-    body #h1-hero {
-      text-align: center;
-      font-size: 3.2em; }
-    body #p-hero {
-      font-weight: 200;
-      text-align: center; }
-    body #btn-hero {
-      justify-content: center; }
     body section {
       padding-left: .5em;
       padding-right: .5em; }
@@ -93,9 +245,13 @@ body {
     body #h1-hero {
       font-size: 2em;
       margin-bottom: .5em; }
+    body main section div img {
+      transform: scale(0.7); }
     body .nav-bar {
       justify-content: center; }
-    body .container, body .navbar-nav {
+    body .container {
+      padding-left: 0; }
+    body .navbar-nav {
       padding-left: 0; }
     body .carousel-item {
       height: 32rem; }
@@ -126,19 +282,23 @@ body {
       color: rgba(255, 255, 255, 0.8); }
   body footer {
     background-image: linear-gradient(90deg, #020024 0%, rgba(0, 0, 0, 0.839395) 60%, #970404 82%);
-    height: 12vh;
+    height: 20vh;
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "made redes";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "made contrata redes";
     justify-content: space-around;
     align-content: center;
     justify-items: center;
     align-items: center; }
     body footer p {
       grid-area: made;
-      color: white;
-      padding-right: 300px; }
+      text-align: center;
+      color: white; }
+    body footer span {
+      grid-area: contrata;
+      text-align: center;
+      color: white; }
     body footer div {
       grid-area: redes; }
       body footer div a {
@@ -177,13 +337,14 @@ body {
       color: #1C96E9; }
   @media only screen and (max-width: 1024px) {
     body footer {
-      height: 20vh;
-      grid-template-rows: 2fr;
+      height: 35vh;
+      grid-template-rows: 3fr;
       grid-template-columns: 1fr;
-      grid-template-areas: "made"  "redes"; }
+      grid-template-areas: "made" "contrata"  "redes"; }
     body #made {
       margin-bottom: 1em; }
     body #redes {
+      margin-top: 3em;
       margin-bottom: 2em; }
     body footer p {
       padding-right: 0px; } }

@@ -1,18 +1,23 @@
 footer {
     background-image: $color-footer;
-    height: 12vh;
+    height: 20vh;
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "made redes";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "made contrata redes";
     justify-content: space-around;
     align-content: center;
     justify-items: center;
     align-items: center;
     p {
         grid-area: made; 
+        text-align: center;
         color: rgb(255, 255, 255);
-        padding-right: 300px;
+    }
+    span {
+        grid-area: contrata;
+        text-align: center;
+        color:rgb(255, 255, 255);
     }
     div {
         grid-area: redes;
@@ -44,18 +49,21 @@ footer {
 @media only screen and (max-width: 1024px) {
 
     footer {
-        height: 20vh;
-        grid-template-rows: 2fr;
+        height: 35vh;
+        grid-template-rows: 3fr;
         grid-template-columns: 1fr;
-        grid-template-areas:    "made" 
+        grid-template-areas:    "made"
+                                "contrata" 
                                 "redes";
     }
 
     #made {
         margin-bottom: 1em ;
     }
+
     
     #redes {
+        margin-top: 3em ;
         margin-bottom: 2em ;
     }
 

@@ -16,18 +16,17 @@ header {
     }
 }
 
-
-
-
-.navbar-light .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+#sticky {
+    position: sticky;
+    top: 0%;
+    z-index: 100;
 }
 
-.navbar-light .navbar-toggler {
-    border-color: #fff;
+.bg-BK {
+    background-color: black;
 }
 
-.nav-item .nav-link.active {
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link.active {
     color: rgb(255, 255, 255);
 }
 
@@ -35,7 +34,68 @@ header {
     color:rgba(255, 255, 255, 0.5);
 }
 
-.nav-item a:hover {
-    color:red;
+.nav-item {
+    font-size: 18px;
+    
 }
+
+.nav-item a:hover {
+    color: #B1070C;;
+}
+
+/* Lineas que forman la hamburguesa */
+
+.toggler-icon{
+    width: 30px;
+    height: 3px;
+    background-color: #B1070C;
+    display: block;
+    transition: all 0.15s;
+}
+
+/* Le agrego espacios a las lineas */
+
+.middle-bar{
+    margin: 5px auto;
+}
+
+/* Cuando esta abierto el menú (INICIO) */
+
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+/* Cuando esta abierto el menú (FIN) */
+
+/* Cuando esta cerrado el menú (INICIO) */
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+
+/* Cuando esta cerrado el menú (FIN) */
+
+/* Color de la hamburguesa cuando esta cerrada */
+.navbar-toggler.collapsed .toggler-icon {
+    background-color: #ffffff;
+}
+
     
