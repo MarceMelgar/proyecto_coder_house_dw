@@ -230,7 +230,8 @@ body {
     font-size: 30px;
     text-align: center;
     padding-top: 1em;
-    padding-bottom: 1em; }
+    padding-bottom: 1em;
+    color: #7c7c7c; }
   @media only screen and (max-width: 1024px) {
     body main div div img {
       src: url(../img/banner-home-banda-tablet.jpg); }
