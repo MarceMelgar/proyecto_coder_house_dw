@@ -5,7 +5,6 @@ h1 {
     font-weight: 700;
 }
 .h2-home {
-    padding-top: 5em;
     text-align: center;
     font-size: 2em;
         
@@ -13,17 +12,14 @@ h1 {
 
 h2 {
     text-align: center;
-    margin: 2em 0;
+    margin-bottom: 2em;
 }
 
 section {
-    margin-top: 5em;
-    margin-bottom: 2.5em;
     padding-left: 6em;
     padding-right: 6em;
 }
-p {
-    margin: 0 10%;
+section p {
     font-size: 20px;
     text-align: left;
 }
@@ -220,6 +216,9 @@ main section.container div {
 /* AUSPICIANTES
 -------------------------------------------------- */
 
+aside {
+    margin-bottom: 7em;
+}
 main aside div {
     display: flex;
     flex-flow: row wrap;

@@ -49,64 +49,87 @@
     <!--Fin de encabezado-->
     <!--Bloque principal-->
     <main>
-        <section class="banner-hero">
-            <article>
-                <h1 id="h1-contacto">CONTACTO</h1>
-                <br>
-            </article> 
-        </section>
-        <!--Contenido--> 
+        <!-- Hero-Section --- Elemento Bootstrap -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../img/banner-home-banda.jpg" class="bd-placeholder-img" alt="Imagen de presentación de la banda">
+                <div class="container">
+                    <div class="carousel-caption text-center">
+                        <h1 class="h1-contact">CONTACTO</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contenido -->
+        <!-- Formulario --- Elemento Bootstrap --> 
         <section class="content">
             <h2>Si querés dejarnos un mensaje, es por acá 👇🏻</h2>
-            <!--Formulario-->
-            <article id="formulario">
-			    <form method="post">
-				    <div>
-                        <label for="nombre"><p id="p-form">Nombre:</p></label>
-                        <input type="text" class="field" placeholder="o apódo ;)" id="nombre">
+            <div class="row justify-content-center">
+                <article class="col-md-7 bg-form">
+                    <form class="container">
+                    <!-- Nombre y Email -->
+                    <div class="row justify-content-between">
+                        <div class="col-5">
+                            <label for="name">Nombre:</label>
+                            <input type="text" class="form-control" placeholder="o apodo ;)" aria-label="First name">
+                        </div>
+                        <div class="col-5">
+                            <label for="inputEmail">Email:</label>
+                            <input type="email" class="form-control" id="inputEmail">
+                        </div>
                     </div>
                     <br>
+                    <!-- Mensaje -->
+                    <div class="form-floating">
+                        ¿Querés decirnos algo?
+                        <textarea class="form-control" placeholder="Lo que quieras, con sinceridad :)" id="floatingTextarea" style="height: 100px">
+                        </textarea>
+                        <label for="floatingTextarea"></label>    
+                    </div>
+                    <br>
+                    <!-- ¿Quiere el disco? -->
                     <div>
-                        <label for="email"><p id="p-form">Correo eléctronico:</p></label>
-                        <input type="email" class="field" placeholder="El que más uses" id="email">            
+                        <label for="respuesta">¿Te gustaría que te llevaramos un disco?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="respuesta" id="Sí" value="Sí">
+                            <label class="form-check-label" for="Sí">
+                                Sí
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="respuesta" id="No" value="No">
+                            <label class="form-check-label" for="No">
+                            No
+                            </label>
+                        </div>
                     </div>
                     <br>
-				    <div>
-                        <label for="mensaje"><p id="p-form">¿Qué te gustaría decirnos?:</p></label>
-                        <textarea class="field" placeholder="Lo que quieras, con sinceridad :)" id="mensaje"></textarea>
-                    </div>
-                    <br>
-				    <div>
-                        <label for="respuesta"><p id="p-form">¿Te gustaría que te llevaramos un disco?</p></label>
-					    <label for="Sí">
-                            Sí<input type="radio" name="respuesta" value="Sí" >
-                        </label>
-                        <label for="No">
-                            No<input type="radio" name="respuesta" value="No">
-                        </label>
-                    </div>
-                    <br>
-				    <div>
-                        <p id="p-form">¿Cuál es tu canción favorita de la banda?</p>
-                        <br>
-				        <select name="letra"> 
-					        <option value="x">Olvidar y soñar</option>
-					        <option value="y">La Maldición</option>
-					        <option value="z">Vino y Bandoneón</option>
-				        </select>
-                    </div>
-                    <br>
-				    <div>
-                        <label for="acepta"><span id="p-form">¿Te gustaría recibir información semanal sobre la banda?</span></label>
-				        <input type="checkbox" id="acepta" value="1">
-                    </div>
-                    <br>
+                    <!-- Canción favorita -->
                     <div>
-                        <label for="enviar"></label>
-                        <input type="button" class="btn" id="enviar" value="Enviar">
-                    </div> 
-                </form>
-		    </article>
+                        ¿Cual es tu canción favorita de la banda?
+                        <select class="form-select form-select-lg mt-3 mb-3" aria-label=".form-select-lg">
+                            <option></option>
+                            <option value="1">Olvidar y soñar</option>
+                            <option value="2">La Maldición</option>
+                            <option value="3">Vino y Bandoneón</option>
+                        </select>
+                    </div>
+                    <br>
+                    <!-- Saber si quiere info de la banda -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="1" name="respuesta" id="acepta">
+                        <label class="form-check-label" for="acepta">
+                        Check si queres suscribirte a nuestra Newsletter
+                        </label>
+                    </div>
+                    <br>
+                    <!-- Enviar -->
+                    <div class="col-2 d-grid gap-2 mx-auto">
+                        <button class="btn btn-primary" type="submit">Enviar</button>
+                    </div>
+                </article>
+            </div>
+            </form>
         </section>
     </main>
     <!--Pie de página-->
