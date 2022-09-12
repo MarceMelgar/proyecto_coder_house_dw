@@ -1,5 +1,5 @@
 
-h2 {
+h2, h3 {
     text-align: center;
     margin-bottom: 2em;
 }
@@ -8,7 +8,7 @@ section {
     padding-left: 6em;
     padding-right: 6em;
 }
-section p {
+section p, article p {
     font-size: 20px;
     text-align: left;
 }
@@ -232,16 +232,15 @@ main {
         h2.h2-home {
             padding-top: 1em;
         }
-        p {
-            a.btn-wp {
-                @extend .btn-cta;
-                padding: 0 1em;
-                margin-bottom: 0px;
-                vertical-align:auto;
-                color: black;
-            }
-        }
     }
+}
+
+.btn-wp {
+    @extend .btn-cta;
+    padding: 0 1em;
+    margin-bottom: 0px;
+    vertical-align:auto;
+    color: black;
 }
 
 
@@ -251,7 +250,7 @@ main {
 
 @media only screen and (max-width: 1024px) {
     
-    h2, h3, p {
+    h2, h3, article p {
         margin-left: 1.5em;
         margin-right: 1.5em;
     }
@@ -259,7 +258,6 @@ main {
 }
 
 @media only screen and (max-width: 576px) {
-
        
     .nav-bar {
         justify-content: center;
