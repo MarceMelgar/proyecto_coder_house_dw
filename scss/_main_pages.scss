@@ -1,4 +1,5 @@
 
+
 /* DEFINO LOS BREADCRUMB
 ----------------------------- */
 
@@ -44,8 +45,12 @@ div {
     font-size: calc(7rem + 2.5vw);
 }
 
-h2, h3 {
+h2 {
     padding-top: 2.5em;
+}
+
+h3 {
+    padding-top: 1.2em;
 }
 
 .row {
@@ -61,6 +66,7 @@ h2, h3 {
 .table-light {
     --bs-table-bg: #ff9595;
 }
+
 
 /* FOTOS
 -------------------------------------------------- */
