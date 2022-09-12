@@ -93,10 +93,10 @@ body {
   body h2, body h3 {
     text-align: center;
     margin-bottom: 2em; }
-  body section {
+  body .section {
     padding-left: 6em;
     padding-right: 6em; }
-  body section p, body article p {
+  body p {
     font-size: 20px;
     text-align: left; }
   body #aparicion-home, body #aparecion-info {
@@ -245,7 +245,7 @@ body {
     vertical-align: auto;
     color: black; }
   @media only screen and (max-width: 1024px) {
-    body h2, body h3, body article p {
+    body article p {
       margin-left: 1.5em;
       margin-right: 1.5em; } }
   @media only screen and (max-width: 576px) {
@@ -261,12 +261,10 @@ body {
     text-decoration: none; }
     body div nav ol li a:hover {
       color: rgba(255, 255, 255, 0.8); }
-  body .h1-pages, body .h1-contact {
+  body .h1-pages {
     text-align: center;
-    font-size: calc(11rem + 2.5vw);
+    font-size: calc(7rem + 2.5vw);
     font-weight: 700; }
-  body .h1-contact {
-    font-size: calc(7rem + 2.5vw); }
   body h2 {
     padding-top: 2.5em; }
   body h3 {
@@ -326,25 +324,20 @@ body {
   25% {
     transform: scale(1.2); }
   50% {
-    transform: scale(0.8); }
+    transform: scale(1); }
   75% {
-    transform: scale(1.4); }
+    transform: scale(1.2); }
   100% {
     transform: scale(1); } }
   @media only screen and (max-width: 1024px) {
-    body .h1-pages, body .h1-contact {
-      font-size: calc(9rem + 1.5vw); }
-    body .h1-contact {
-      font-size: calc(4.2rem + 2.5vw);
-      font-weight: 700; }
-    body main div div img {
-      src: url(../img/banner-home-banda-tablet.jpg); } }
+    body .h1-pages {
+      font-size: 7rem; } }
+  @media only screen and (max-width: 768px) {
+    body .h1-pages {
+      font-size: 5rem; } }
   @media only screen and (max-width: 576px) {
-    body .h1-contact {
-      font-size: calc(3.2rem + 2.5vw);
-      font-weight: 700; }
-    body main div div img {
-      src: url(../img/banner-home-banda-smartphone.jpg); }
+    body .h1-pages {
+      font-size: 3.3rem; }
     body form div.row {
       flex-direction: column; }
       body form div.row div {

@@ -36,13 +36,8 @@ div {
 
 .h1-pages {
     text-align: center;
-    font-size: calc(11rem + 2.5vw);
-    font-weight: 700;
-}
-
-.h1-contact {
-    @extend .h1-pages;
     font-size: calc(7rem + 2.5vw);
+    font-weight: 700;
 }
 
 h2 {
@@ -154,11 +149,11 @@ h3 {
     }
 
     50% {
-        transform:scale(0.8);
+        transform:scale(1);
     }
 
     75% {
-        transform:scale(1.4);
+        transform:scale(1.2);
     }
 
     100% {
@@ -174,30 +169,23 @@ h3 {
 
 @media only screen and (max-width: 1024px) {
 
+
     .h1-pages {
-        font-size: calc(9rem + 1.5vw);
-    }
-
-    .h1-contact {
-        font-size: calc(4.2rem + 2.5vw);
-        font-weight: 700;
-    }
-
-    main div div img {
-        src: url(../img/banner-home-banda-tablet.jpg);
+        font-size: 7rem;
     }
 
 }
 
+@media only screen and (max-width: 768px) {
+    .h1-pages {
+        font-size: 5rem;
+    }
+}
+
 @media only screen and (max-width: 576px) {
     
-    .h1-contact {
-        font-size: calc(3.2rem + 2.5vw);
-        font-weight: 700;
-    }
-    
-    main div div img {
-        src: url(../img/banner-home-banda-smartphone.jpg);
+    .h1-pages {
+        font-size: 3.3rem;
     }
 
     form {
@@ -208,5 +196,6 @@ h3 {
             }
         }
     }
+
 
 }
