@@ -1,14 +1,3 @@
-h1 {
-    padding-top: 2em;
-    text-align: center;
-    font-size: ($h1-hero*2)+6; //USO DE OPERACIÓN
-    font-weight: 700;
-}
-.h2-home {
-    text-align: center;
-    font-size: 2em;
-        
-}
 
 h2 {
     text-align: center;
@@ -27,6 +16,8 @@ section p {
 
 /* INTRO
 -------------------------------------------------- */
+
+/* Aparición de imagen */
 
 #aparicion-home {
     animation-duration: 6s;
@@ -50,14 +41,22 @@ section p {
     }
 }
 
+#img-fondo-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("/img/Portada4.jpg");
+    background-color: rgba(0,0,0,.6);
+    background-blend-mode: soft-light;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Aparición bloque informativo */
+
 #aparecion-info {
-    animation-duration: 6s;
-    animation-timing-function: ease;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: none;
-    animation-play-state: running;
+    @extend #aparicion-home;
     animation-name: info-aparece;
 }
 
@@ -76,17 +75,7 @@ section p {
     }
 }
 
-#img-fondo-home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url("/img/Portada4.jpg");
-    background-color: rgba(0,0,0,.6);
-    background-blend-mode: soft-light;
-    background-position: center;
-    background-size: cover;
-}
+/* Estilos bloque informativo */
 
 .cta {
     bottom: 0;
@@ -119,12 +108,19 @@ section p {
     color: red;
 }
 
-.btn-wp {
-    @extend .btn-cta;
-    padding: 0 1em;
-    margin-bottom: 0px;
-    vertical-align:auto;
-    color: black;
+#mas-info {
+    margin-top: 2em;
+    color:rgb(255, 255, 255);
+}
+
+.bi {
+    display: inline-block;
+    font: normal normal normal 14px/1;
+    font-size: inherit;
+    text-rendering: auto;
+    margin-left: 3px;
+    margin-right: 3px;
+    color:rgb(255, 255, 255);
 }
 
 .bi-music-note-beamed {
@@ -133,20 +129,14 @@ section p {
     margin-right: 6px;
 }
 
-#mas-info {
-    margin-top: 2em;
-}
+/* Efecto de flechas hacía abajo */
 
-div span {
-    color: #ffffff;
-}
-
-div div i {
-    animation: bounce 1s infinite;
+.i-move {
+    animation: i-move 1s infinite;
     animation-timing-function: ease;
 }
 
-@keyframes bounce {
+@keyframes i-move {
 
     0% {
     transform: translateY(0);
@@ -160,80 +150,98 @@ div div i {
     }
 } 
 
-.bi {
-    display: inline-block;
-    font: normal normal normal 14px/1;
-    font-size: inherit;
-    text-rendering: auto;
-    margin-left: 3px;
-    margin-right: 3px;
-    color:rgb(255, 255, 255);
+/* FIN DE INTRO
+-------------------------------------------------- */
+
+/* AUSPICIANTES
+-------------------------------------------------- */
+
+main {
+    h1.h1-home {
+        padding-top: 2em;
+        text-align: center;
+        font-size: ($h1-hero*2)+6; //USO DE OPERACIÓN
+        font-weight: 700;
+    }
+    aside {
+        div {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content:center;
+            align-items: center;
+            padding-bottom: 1.5em;
+            p {
+                font-family: 'Nanum Pen Script', cursive;
+                font-size: 30px;
+                text-align: center;
+                padding-top: 1em;
+                padding-bottom: 1em;
+            }
+        }
+    }
 }
 
 /* COMPRA VINILO
 -------------------------------------------------- */
 
-section.container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content:space-evenly;
-    align-items: center;
-}
+main {
+    section.container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content:space-evenly;
+        align-items: center;
+        h2.h2-home {
+            padding-top: 3em;
+            text-align: center;
+            font-size: 2.2em;
+        }
+        div {
+            justify-content: center;
+            img {
+                width: 100%;
+            }
+        }
+        div#columna {
+            ul {
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                    a.btn-buy {
+                        border-bottom: 2px solid red;
+                        text-decoration: none;
+                        display: inline-block;
+                        padding: 0 2em 0.7em;
+                        margin-bottom: 10px;
+                        text-align: center;
+                        vertical-align: middle;
+                        color: black;
+                        &:hover {
+                            color: red;
+                        }
+                    }
+                }
+            }
 
-main section.container div {
-    justify-content: center;
-}
-
-#ancho-img {
-    width: 100%;
-}
-
-.buy {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-}
-
-.btn-buy {
-    border-bottom: 2px solid red;
-    text-decoration: none;
-    display: inline-block;
-    padding: 0 2em 0.7em;
-    margin-bottom: 10px;
-    text-align: center;
-    vertical-align: middle;
-    color: black;
-}
-
-.btn-buy:hover {
-    color: red;
-}
-
-/* AUSPICIANTES
--------------------------------------------------- */
-
-aside {
-    margin-bottom: 7em;
-}
-main aside div {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content:center;
-    align-items: center;
-    padding-bottom: 1.5em;
-}
-
-main aside p {
-    font-family: 'Nanum Pen Script', cursive;
-    font-size: 30px;
-    text-align: center;
-    padding-top: 1em;
-    padding-bottom: 1em;
-
+        }
+    }
+    section.container { // Sección final de texto
+        h2.h2-home {
+            padding-top: 1em;
+        }
+        p {
+            a.btn-wp {
+                @extend .btn-cta;
+                padding: 0 1em;
+                margin-bottom: 0px;
+                vertical-align:auto;
+                color: black;
+            }
+        }
+    }
 }
 
 
@@ -242,52 +250,20 @@ main aside p {
 
 
 @media only screen and (max-width: 1024px) {
-        
-
-    main div div img {
-        src:url(../img/banner-home-banda-tablet.jpg);
-    }
     
-    section {
-        padding-left: .5em;
-        padding-right: .5em;
-    }
-    
-    h2, h3 {
+    h2, h3, p {
         margin-left: 1.5em;
         margin-right: 1.5em;
-        font-weight: 700;
     }
+
 }
 
 @media only screen and (max-width: 576px) {
 
-   /* #h1-hero {
-        font-size: 2em;
-        margin-bottom: .5em;
-    } */
-
-    .h2-home {
-        padding-top: 1em;
-    }
-
-    section.container {
-        padding-bottom: 3em;
-    }
        
     .nav-bar {
         justify-content: center;
     }
 
-    .container {
-        padding-left: 0;
-    }
-
-    .navbar-nav {
-        padding-left: 0;
-    }
-
-    .carousel-item {
-        height: 32rem;
-        }
+    
 }

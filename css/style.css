@@ -7,6 +7,10 @@ body {
   width: 100vw;
   overflow-x: hidden;
   box-sizing: border-box;
+  /* Estilos de las letras del menú
+-------------------------------------------------- */
+  /* MENÚ HAMBURGUESA PROPIO
+-------------------------------------------------- */
   /* Lineas que forman la hamburguesa */
   /* Le agrego espacios a las lineas */
   /* Cuando esta abierto el menú (INICIO) */
@@ -16,32 +20,32 @@ body {
   /* Color de la hamburguesa cuando esta cerrada */
   /* INTRO
 -------------------------------------------------- */
-  /* COMPRA VINILO
+  /* Aparición de imagen */
+  /* Aparición bloque informativo */
+  /* Estilos bloque informativo */
+  /* Efecto de flechas hacía abajo */
+  /* FIN DE INTRO
 -------------------------------------------------- */
   /* AUSPICIANTES
 -------------------------------------------------- */
-  /* RESPONSIVE
+  /* COMPRA VINILO
 -------------------------------------------------- */
   /* RESPONSIVE
-------------------------------------- */
-  /* MAIN
 -------------------------------------------------- */
-  /* FOTOS
+  /* EFECTOS
 -------------------------------------------------- */
-  /* FORM
--------------------------------------------------- */ }
+  /* RESPONSIVE
+------------------------------------- */ }
+  body #sticky {
+    position: sticky;
+    top: 0%;
+    z-index: 100; }
   body header nav {
     background-color: black; }
     body header nav div div ul li {
       padding-left: 2em;
       font-size: 20px;
       display: inline-block; }
-  body #sticky {
-    position: sticky;
-    top: 0%;
-    z-index: 100; }
-  body .bg-BK {
-    background-color: black; }
   body .navbar-nav .nav-link.active, body .navbar-nav .show > .nav-link.active {
     color: white; }
   body .nav-link {
@@ -76,14 +80,6 @@ body {
     transform: rotate(0); }
   body .navbar-toggler.collapsed .toggler-icon {
     background-color: #ffffff; }
-  body h1 {
-    padding-top: 2em;
-    text-align: center;
-    font-size: 62px;
-    font-weight: 700; }
-  body .h2-home {
-    text-align: center;
-    font-size: 2em; }
   body h2 {
     text-align: center;
     margin-bottom: 2em; }
@@ -93,7 +89,7 @@ body {
   body section p {
     font-size: 20px;
     text-align: left; }
-  body #aparicion-home {
+  body #aparicion-home, body #aparecion-info {
     animation-duration: 6s;
     animation-timing-function: ease;
     animation-delay: 0s;
@@ -110,14 +106,17 @@ body {
   100% {
     opacity: 1;
     transform: scale(1); } }
+  body #img-fondo-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("/img/Portada4.jpg");
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: soft-light;
+    background-position: center;
+    background-size: cover; }
   body #aparecion-info {
-    animation-duration: 6s;
-    animation-timing-function: ease;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: none;
-    animation-play-state: running;
     animation-name: info-aparece; }
 
 @keyframes info-aparece {
@@ -130,16 +129,6 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0px); } }
-  body #img-fondo-home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url("/img/Portada4.jpg");
-    background-color: rgba(0, 0, 0, 0.6);
-    background-blend-mode: soft-light;
-    background-position: center;
-    background-size: cover; }
   body .cta {
     bottom: 0;
     left: 0;
@@ -153,7 +142,7 @@ body {
     margin-bottom: 1em;
     font-size: large;
     color: white; }
-  body .btn-cta, body .btn-wp {
+  body .btn-cta, body main section.container p a.btn-wp {
     border-bottom: 2px solid red;
     text-decoration: none;
     display: inline-block;
@@ -162,32 +151,11 @@ body {
     text-align: center;
     vertical-align: middle;
     color: white; }
-  body .btn-cta:hover, body .btn-wp:hover {
+  body .btn-cta:hover, body main section.container p a.btn-wp:hover {
     color: red; }
-  body .btn-wp {
-    padding: 0 1em;
-    margin-bottom: 0px;
-    vertical-align: auto;
-    color: black; }
-  body .bi-music-note-beamed {
-    color: #ffffff;
-    margin-left: 6px;
-    margin-right: 6px; }
   body #mas-info {
-    margin-top: 2em; }
-  body div span {
-    color: #ffffff; }
-  body div div i {
-    animation: bounce 1s infinite;
-    animation-timing-function: ease; }
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0); }
-  50% {
-    transform: translateY(3px); }
-  100% {
-    transform: translateY(0); } }
+    margin-top: 2em;
+    color: white; }
   body .bi {
     display: inline-block;
     font: normal normal normal 14px/1;
@@ -196,75 +164,83 @@ body {
     margin-left: 3px;
     margin-right: 3px;
     color: white; }
-  body section.container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: center; }
-  body main section.container div {
-    justify-content: center; }
-  body #ancho-img {
-    width: 100%; }
-  body .buy {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0; }
-  body .btn-buy {
-    border-bottom: 2px solid red;
-    text-decoration: none;
-    display: inline-block;
-    padding: 0 2em 0.7em;
-    margin-bottom: 10px;
+  body .bi-music-note-beamed {
+    color: #ffffff;
+    margin-left: 6px;
+    margin-right: 6px; }
+  body .i-move {
+    animation: i-move 1s infinite;
+    animation-timing-function: ease; }
+
+@keyframes i-move {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(3px); }
+  100% {
+    transform: translateY(0); } }
+  body main h1.h1-home {
+    padding-top: 2em;
     text-align: center;
-    vertical-align: middle;
-    color: black; }
-  body .btn-buy:hover {
-    color: red; }
-  body aside {
-    margin-bottom: 7em; }
+    font-size: 62px;
+    font-weight: 700; }
   body main aside div {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     padding-bottom: 1.5em; }
-  body main aside p {
-    font-family: 'Nanum Pen Script', cursive;
-    font-size: 30px;
-    text-align: center;
-    padding-top: 1em;
-    padding-bottom: 1em; }
+    body main aside div p {
+      font-family: 'Nanum Pen Script', cursive;
+      font-size: 30px;
+      text-align: center;
+      padding-top: 1em;
+      padding-bottom: 1em; }
+  body main section.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center; }
+    body main section.container h2.h2-home {
+      padding-top: 3em;
+      text-align: center;
+      font-size: 2.2em; }
+    body main section.container div {
+      justify-content: center; }
+      body main section.container div img {
+        width: 100%; }
+    body main section.container div#columna ul {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      body main section.container div#columna ul li a.btn-buy {
+        border-bottom: 2px solid red;
+        text-decoration: none;
+        display: inline-block;
+        padding: 0 2em 0.7em;
+        margin-bottom: 10px;
+        text-align: center;
+        vertical-align: middle;
+        color: black; }
+        body main section.container div#columna ul li a.btn-buy:hover {
+          color: red; }
+  body main section.container h2.h2-home {
+    padding-top: 1em; }
+  body main section.container p a.btn-wp {
+    padding: 0 1em;
+    margin-bottom: 0px;
+    vertical-align: auto;
+    color: black; }
   @media only screen and (max-width: 1024px) {
-    body main div div img {
-      src: url(../img/banner-home-banda-tablet.jpg); }
-    body section {
-      padding-left: .5em;
-      padding-right: .5em; }
-    body h2, body h3 {
+    body h2, body h3, body p {
       margin-left: 1.5em;
-      margin-right: 1.5em;
-      font-weight: 700; } }
+      margin-right: 1.5em; } }
   @media only screen and (max-width: 576px) {
-    body {
-      /* #h1-hero {
-        font-size: 2em;
-        margin-bottom: .5em;
-    } */ }
-      body .h2-home {
-        padding-top: 1em; }
-      body section.container {
-        padding-bottom: 3em; }
-      body .nav-bar {
-        justify-content: center; }
-      body .container {
-        padding-left: 0; }
-      body .navbar-nav {
-        padding-left: 0; }
-      body .carousel-item {
-        height: 32rem; } }
+    body .nav-bar {
+      justify-content: center; } }
   body .breadcrumb {
     justify-content: center; }
   body .breadcrumb-item:active {
@@ -275,86 +251,54 @@ body {
     text-decoration: none; }
     body div nav ol li a:hover {
       color: rgba(255, 255, 255, 0.8); }
-  body .h1-pages {
+  body .h1-pages, body .h1-contact {
     text-align: center;
     font-size: calc(11rem + 2.5vw);
     font-weight: 700; }
+  body .h1-contact {
+    font-size: calc(7rem + 2.5vw); }
+  body .h2-pages {
+    padding-top: 2.5em; }
   body .row {
     --bs-gutter-x: 0;
     --bs-gutter-y: 0; }
   body .card-body p {
     text-align: start; }
   body .table {
-    width: 80%; }
-  @media only screen and (max-width: 1024px) {
-    body .h1-pages {
-      font-size: calc(9rem + 1.5vw); }
-    body .h1-contact {
-      font-size: calc(5rem + 2.5vw);
-      font-weight: 700; } }
-  body section {
-    margin-bottom: 2.5em; }
-  body section.container {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center; }
-  body main section div ul li {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  body .ajuste-tamaño {
-    transform: scale(0.8); }
-  body p {
-    text-align: left; }
-  body .row {
-    --bs-gutter-x: 0;
-    --bs-gutter-y: 0; }
-  body .h1-pages {
-    font-size: calc(11rem + 2.5vw);
-    font-weight: 700; }
-  body .h1-contact {
-    font-size: calc(8rem + 2.5vw);
-    font-weight: 700; }
-  body h2 {
-    margin-top: 2em;
-    margin-bottom: 2em;
-    text-align: center;
-    font-size: 2em;
-    font-weight: 600; }
-  body h3 {
-    margin-top: 2em;
-    margin-bottom: 2em;
-    text-align: center;
-    font-size: 2em;
-    font-weight: 500; }
+    width: 100%; }
   body .table-light {
     --bs-table-bg: #ff9595; }
-  body #galeria img {
-    width: 100%;
-    height: 220px; }
-  body #galeria .col-lg-3 {
-    padding: 10px; }
-  body .cada-foto {
-    transition: 0.5s;
-    object-fit: cover; }
-  body .cada-foto:hover {
-    transform: scale(1.1); }
-  body .bg-form {
-    padding: 1rem;
-    background-color: #ff9595;
-    border-radius: 0.375rem; }
-  body .form-control:focus {
-    border-color: #a00000;
-    box-shadow: 0 0 0.5rem rgba(255, 0, 0, 0.7); }
-  body .form-check-input:checked {
-    background-color: #a00000;
-    border-color: #a00000;
-    box-shadow: 0 0 0.7rem rgba(255, 0, 0, 0.7); }
-  body .form-select:focus {
-    border-color: #a00000;
-    box-shadow: 0 0 0.7rem rgba(255, 0, 0, 0.7); }
+  body #efecto-p {
+    text-align: center;
+    animation-name: info-shows;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out; }
+
+@keyframes info-shows {
+  0% {
+    transform: scale(1); }
+  25% {
+    transform: scale(1.2); }
+  50% {
+    transform: scale(0.8); }
+  75% {
+    transform: scale(1.4); }
+  100% {
+    transform: scale(1); } }
+  @media only screen and (max-width: 1024px) {
+    body .h1-pages, body .h1-contact {
+      font-size: calc(9rem + 1.5vw); }
+    body .h1-contact {
+      font-size: calc(4.2rem + 2.5vw);
+      font-weight: 700; }
+    body main div div img {
+      src: url(../img/banner-home-banda-tablet.jpg); } }
+  @media only screen and (max-width: 576px) {
+    body .h1-contact {
+      font-size: calc(3.2rem + 2.5vw);
+      font-weight: 700; }
+    body main div div img {
+      src: url(../img/banner-home-banda-smartphone.jpg); } }
   body footer {
     background-image: linear-gradient(90deg, #020024 0%, rgba(0, 0, 0, 0.839395) 60%, #970404 82%);
     height: 20vh;

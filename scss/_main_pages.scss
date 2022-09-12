@@ -26,10 +26,21 @@ div {
     }
 }
 
+// Estilos
+
 .h1-pages {
     text-align: center;
     font-size: calc(11rem + 2.5vw);
     font-weight: 700;
+}
+
+.h1-contact {
+    @extend .h1-pages;
+    font-size: calc(7rem + 2.5vw);
+}
+
+.h2-pages {
+    padding-top: 2.5em;
 }
 
 .row {
@@ -42,8 +53,45 @@ div {
 }
 
 .table {
-    width: 80%;
+    width: 100%;
 }
+
+.table-light {
+    --bs-table-bg: #ff9595;
+}
+
+/* EFECTOS
+-------------------------------------------------- */
+
+#efecto-p {
+    text-align: center;
+    animation-name:info-shows;
+    animation-duration:4s;
+    animation-timing-function:ease-in-out;
+}
+
+@keyframes info-shows {
+    0% {
+        transform:scale(1);
+    }
+
+    25% {
+        transform:scale(1.2);
+    }
+
+    50% {
+        transform:scale(0.8);
+    }
+
+    75% {
+        transform:scale(1.4);
+    }
+
+    100% {
+        transform:scale(1);
+    }
+}
+
 
 
 
@@ -57,118 +105,24 @@ div {
     }
 
     .h1-contact {
-        font-size: calc(5rem + 2.5vw);
+        font-size: calc(4.2rem + 2.5vw);
         font-weight: 700;
+    }
+
+    main div div img {
+        src: url(../img/banner-home-banda-tablet.jpg);
     }
 
 }
 
-
-/* MAIN
--------------------------------------------------- */
-
-section {
-    margin-bottom: 2.5em;
-}
-
-section.container {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-main section div ul li {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.ajuste-tamaño {
-    transform: scale(0.8);
-}
-
-p {
-    text-align: left;
-}
-
-.row {
-    --bs-gutter-x: 0;
-    --bs-gutter-y: 0;
-}
-
-.h1-pages {
-    font-size: calc(11rem + 2.5vw);
-    font-weight: 700;
-}
-
-.h1-contact {
-    font-size: calc(8rem + 2.5vw);
-    font-weight: 700;
-}
-
-h2 {
-    margin-top: 2em;
-    margin-bottom: 2em;
-    text-align: center;
-    font-size: 2em;
-    font-weight: 600;
-}
-
-h3 {
-    margin-top: 2em;
-    margin-bottom: 2em;
-    text-align: center;
-    font-size: 2em;
-    font-weight: 500;
-}
-
-.table-light {
-    --bs-table-bg: #ff9595;
-}
-
-/* FOTOS
--------------------------------------------------- */
-
-#galeria img {
-    width: 100%;
-    height: 220px;
-}
-
-#galeria .col-lg-3 {
-    padding: 10px;
-}
-.cada-foto {
-    transition: 0.5s;
-    object-fit: cover;
-}
-
-.cada-foto:hover {
-    transform: scale(1.1);
-}
-
-/* FORM
--------------------------------------------------- */
-
-.bg-form {
-    padding: 1rem;
-    background-color: #ff9595;
-    border-radius: 0.375rem;;
-}
-
-.form-control:focus {
-    border-color: #a00000;
-    box-shadow:  0 0 .5rem rgba(255,0,0,.70);
-}
-
-.form-check-input:checked {
-    background-color: #a00000;
-    border-color: #a00000;
-    box-shadow:  0 0 .7rem rgba(255,0,0,.70);
-}
-
-.form-select:focus {
-    border-color: #a00000;
-    box-shadow:  0 0 .7rem rgba(255,0,0,.70);
+@media only screen and (max-width: 576px) {
+    
+    .h1-contact {
+        font-size: calc(3.2rem + 2.5vw);
+        font-weight: 700;
+    }
+    
+    main div div img {
+        src: url(../img/banner-home-banda-smartphone.jpg);
+    }
 }

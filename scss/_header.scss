@@ -1,4 +1,10 @@
 
+#sticky {
+    position: sticky;
+    top: 0%;
+    z-index: 100;
+}
+
 header {
     nav {
         background-color: map-get($mapa , $key:fondo1); // USO DE MAP-GET
@@ -16,15 +22,8 @@ header {
     }
 }
 
-#sticky {
-    position: sticky;
-    top: 0%;
-    z-index: 100;
-}
-
-.bg-BK {
-    background-color: black;
-}
+/* Estilos de las letras del menú
+-------------------------------------------------- */
 
 .navbar-nav .nav-link.active, .navbar-nav .show>.nav-link.active {
     color: rgb(255, 255, 255);
@@ -42,6 +41,9 @@ header {
 .nav-item a:hover {
     color: #B1070C;;
 }
+
+/* MENÚ HAMBURGUESA PROPIO
+-------------------------------------------------- */
 
 /* Lineas que forman la hamburguesa */
 
