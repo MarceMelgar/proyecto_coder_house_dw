@@ -46,7 +46,7 @@ body {
 -------------------------------------------------- */
   /* RESPONSIVE
 ------------------------------------- */ }
-  body #sticky {
+  body .sticky {
     position: sticky;
     top: 0%;
     z-index: 100; }
@@ -96,9 +96,12 @@ body {
   body .section {
     padding-left: 6em;
     padding-right: 6em; }
-  body p {
+  body p, body .p-center {
     font-size: 20px;
     text-align: left; }
+  body .p-center {
+    text-align: center;
+    padding-bottom: 3em; }
   body #aparicion-home, body #aparecion-info {
     animation-duration: 6s;
     animation-timing-function: ease;
@@ -200,7 +203,7 @@ body {
     justify-content: center;
     align-items: center;
     padding-bottom: 1.5em; }
-    body main aside div p {
+    body main aside div p, body main aside div .p-center {
       font-family: 'Nanum Pen Script', cursive;
       font-size: 30px;
       text-align: center;
@@ -245,7 +248,7 @@ body {
     vertical-align: auto;
     color: black; }
   @media only screen and (max-width: 1024px) {
-    body article p {
+    body article p, body article .p-center {
       margin-left: 1.5em;
       margin-right: 1.5em; } }
   @media only screen and (max-width: 576px) {
@@ -353,7 +356,7 @@ body {
     align-content: center;
     justify-items: center;
     align-items: center; }
-    body footer p {
+    body footer p, body footer .p-center {
       grid-area: made;
       text-align: center;
       margin-top: 2em;
@@ -411,5 +414,5 @@ body {
     body #redes {
       margin-top: 2em;
       margin-bottom: 2em; }
-    body footer p {
+    body footer p, body footer .p-center {
       padding-right: 0; } }

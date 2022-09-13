@@ -54,7 +54,7 @@
         <!-- Hero-Section --- Elemento Bootstrap -->
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="../img/banner-01.jpg" class="bd-placeholder-img" alt="Imagen de presentación de la banda">
+                <img src="../img/banner-03.jpg" class="bd-placeholder-img" alt="Imagen de presentación de la banda">
                 <div class="container">
                     <div class="carousel-caption text-center">
                         <h1 class="h1-pages">CONTACTO</h1>
@@ -88,35 +88,42 @@
                         </div>
                         <br>
                          <!-- Mensaje -->
-                        <div class="form-floating">
-                            ¿Querés decirnos algo?
-                            <textarea class="form-control" placeholder="Lo que quieras, con sinceridad :)" id="floatingTextarea" style="height: 100px">
-                            </textarea>
-                            <label for="floatingTextarea"></label>    
+                         <div class="mb-3">
+                            <label for="Textarea1" class="form-label">¿Querés decirnos algo?</label>
+                            <textarea class="form-control" placeholder="Lo que quieras, ¡con sinceridad!" id="Textarea1" rows="3"></textarea>
                         </div>
                         <br>
                         <!-- ¿Quiere el disco? -->
-                        <div>
-                            <label for="respuesta">¿Te gustaría que te llevaramos un disco?</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="respuesta" id="Sí" value="Sí">
-                                <label class="form-check-label" for="Sí">
-                                    Sí
-                                </label>
+                        <div class="row justify-content-between">
+                            <div class="col-5">
+                                <label for="respuesta">¿Te gustaría que te llevaramos un disco?</label>
+                                <div class="row">
+                                    <div class="col-5 form-check">
+                                        <input class="form-check-input" type="radio" name="respuesta" id="Sí" value="Sí">
+                                        <label class="form-check-label" for="Sí">
+                                            Sí
+                                        </label>
+                                    </div>
+                                    <div class="col-5 form-check">
+                                        <input class="form-check-input" type="radio" name="respuesta" id="No" value="No">
+                                        <label class="form-check-label" for="No">
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="respuesta" id="No" value="No">
-                                <label class="form-check-label" for="No">
-                                    No
-                                </label>
+                            <br>
+                            <div class="col-5">
+                                <label for="inputAddress" class="form-label">Si respuesta es sí, pon aquí tu dirección</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="Ejm: Av. Florida 1223">
                             </div>
                         </div>
                         <br>
                         <!-- Canción favorita -->
                         <div>
-                            ¿Cual es tu canción favorita de la banda?
-                            <select class="form-select form-select-lg mt-3 mb-3" aria-label=".form-select-lg">
-                                <option></option>
+                            <label for="favorita">¿Cual es tu canción favorita de la banda?</label> 
+                            <select class="form-select form-select-lg mt-3 mb-3" aria-label=".form-select-lg" name="favorita">
+                                <option>Desplegar para elegir canción👇</option>
                                 <option value="1">Olvidar y soñar</option>
                                 <option value="2">La Maldición</option>
                                 <option value="3">Vino y Bandoneón</option>
@@ -139,6 +146,12 @@
                 </article>
             </div>
         </section>
+        <article class="container mb-5">
+            <h2>O sino...</h2>
+            <br>
+            <p>Sumate tambén a nuestro grupo exclusivo de WhatsApp. Allí compartimos toda la información día a día de la banda, los preparativos para futuros toques, detrás de escenas, ensayos y más. También, cuando estemos en ruta, tendrás mensajes de video en vivo y en directo desde la VAN y podrás seguir el minuto a minuto de la banda llegando a las ciudades en donde toquemos. <br><br> Para nosotros la idea de hacer música es divertirnos, conectar, "hacer ruido" y si es junto a vos, ¡mejor! <br><br> ¿Te vemos en el <a class="btn-wp" href="https://chat.whatsapp.com/Jw45ZTQ2JHQB6l7aUISnql" target="_blank">grupo de WhatsApp</a>  ?</p>
+            <br><br>
+        </article>
     </main>
     <!--Pie de página-->
     <footer>
