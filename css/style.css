@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.gstatic.com");
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -148,7 +149,7 @@ body {
     height: 70px;
     font-size: 26px;
     font-family: 'Bebas Neue', cursive;
-    background: linear-gradient(transparent 5%, #B1070C 5%);
+    background: #B1070C;
     border: 0;
     color: #fff;
     vertical-align: middle;
@@ -173,7 +174,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(transparent 3%, #070f0f 3%, #2e0d12 5%, #FF013C 5%);
+    background: linear-gradient(#43b1b1 3%, #d06777 5%, #ff4c76 5%);
     text-shadow: -3px -3px 0px #ff0026, 3px 3px 0px #1d1616;
     clip-path: var(--slice-0); }
   body .btn-intro:hover::after {
